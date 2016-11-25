@@ -22,6 +22,21 @@
 .ui-datepicker table {
   width: 100%;
 }
+.ui-datepicker-header {
+  color: #e0e0e0;
+  font-weight: 700;
+  -webkit-box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,0.2);
+  -moz-box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,0.2);
+  box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,0.2);
+  text-shadow: 1px -1px 0px #000;
+  line-height: 30px;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: #fff;
+}
+.ui-datepicker-title {
+  text-align: center;
+}
 body {
   background-image: url("../images/background2.png");
   background-size: cover;
@@ -74,6 +89,7 @@ body {
   top: 23vh;
   background-color: rgba(255,255,255,0.8);
   z-index: 2;
+  border: solid 1px rgba(1,83,165,0.5);
 }
 .box-reserva .box-img {
   width: 100%;
@@ -90,6 +106,8 @@ body {
 .box-reserva .box-check .check-in,
 .box-reserva .box-check .check-out {
   position: relative;
+  background-color: rgba(255,255,255,0.4);
+  padding: 10px 15px;
 }
 .box-reserva .box-check .check-in:hover .fecha p,
 .box-reserva .box-check .check-out:hover .fecha p,
