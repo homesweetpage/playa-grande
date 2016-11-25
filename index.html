@@ -49,18 +49,35 @@
     <div class="box-img">
       <img class="img-responsive" src="images/logo1.png" alt="Logo Hostel Playa Grande" />
     </div>
-    <div class="box-fecha">
-      <div class="col-sm-6 check-in">
-        <span>check in</span>
+    <form action="#">
+      <div class="box-check">
+        <div class="col-sm-6 check-in">
+          <span>check in</span>
+          <div class="fecha">
+            <p>25</p>
+          </div>
+          <div class="dia">
+            <span>vie</span>
+            <span>nov</span>
+          </div>
+          <input type="text" id="fecha-check-in">
+        </div>
+        <div class="col-sm-6 check-out">
+          <span>check out</span>
+          <div class="fecha">
+            <p>26</p>
+          </div>
+          <div class="dia">
+            <span>sab</span>
+            <span>nov</span>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-6 check-out">
-        <span>check out</span>
-        <p>tesasd</p>
+      <div class="box-botton">
+        <span>reservá ahora</span>
+      
       </div>
-    </div>
-    <div class="box-botton">
-
-    </div>
+    </form>
   </div><!-- ./BOX RESERVA -->
 
 
@@ -115,7 +132,17 @@
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeOlwGrHwbkPbFkXvAdXEN3On7mrWtxTc"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/map.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+      $(function(){
+        $("#fecha-check-in").datepicker({
+          inline: true,
+          showOtherMonths: true,
+          dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+        });
+      });
+  </script>
 </body>
 </html>

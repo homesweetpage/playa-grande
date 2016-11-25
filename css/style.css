@@ -7,6 +7,21 @@
 #map {
   height: 300px;
 }
+.ui-datepicker {
+  width: 216px;
+  height: auto;
+  margin: 5px auto 0;
+  font: 9pt Arial, sans-serif;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+.ui-datepicker a {
+  text-decoration: none;
+}
+.ui-datepicker table {
+  width: 100%;
+}
 body {
   background-image: url("../images/background2.png");
   background-size: cover;
@@ -54,9 +69,9 @@ body {
 .box-reserva {
   position: fixed;
   width: 300px;
-  height: 60%;
+  padding: 0 0 40px 0;
   left: 5vw;
-  top: 18vh;
+  top: 23vh;
   background-color: rgba(255,255,255,0.8);
   z-index: 2;
 }
@@ -64,15 +79,111 @@ body {
   width: 100%;
   padding: 5% 15px 0 15px;
 }
-.box-reserva .box-fecha {
+.box-reserva .box-check {
   width: 100%;
+  height: 100px;
+  display: block;
 }
-.box-reserva .box-fecha span {
+.box-reserva .box-check .check-in {
+  border-right: solid 1px #faa74b;
+}
+.box-reserva .box-check .check-in,
+.box-reserva .box-check .check-out {
+  position: relative;
+}
+.box-reserva .box-check .check-in:hover .fecha p,
+.box-reserva .box-check .check-out:hover .fecha p,
+.box-reserva .box-check .check-in:focus .fecha p,
+.box-reserva .box-check .check-out:focus .fecha p,
+.box-reserva .box-check .check-in:hover .dia p,
+.box-reserva .box-check .check-out:hover .dia p,
+.box-reserva .box-check .check-in:focus .dia p,
+.box-reserva .box-check .check-out:focus .dia p,
+.box-reserva .box-check .check-in:hover .fecha span,
+.box-reserva .box-check .check-out:hover .fecha span,
+.box-reserva .box-check .check-in:focus .fecha span,
+.box-reserva .box-check .check-out:focus .fecha span,
+.box-reserva .box-check .check-in:hover .dia span,
+.box-reserva .box-check .check-out:hover .dia span,
+.box-reserva .box-check .check-in:focus .dia span,
+.box-reserva .box-check .check-out:focus .dia span {
+  color: #faa74b;
+}
+.box-reserva .box-check .check-in input,
+.box-reserva .box-check .check-out input {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 10;
+}
+.box-reserva .box-check span {
   display: block;
   text-transform: uppercase;
   padding-bottom: 3px;
-  font-size: 10px;
+  font-size: 12px;
+  font-weight: 700;
   margin-bottom: 3px;
   text-align: center;
   color: #242059;
+  border-bottom: solid 1px #faa74b;
+}
+.box-reserva .box-check .fecha,
+.box-reserva .box-check .dia {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  float: left;
+  padding: 6px 5px;
+}
+.box-reserva .box-check .fecha p,
+.box-reserva .box-check .dia p {
+  font-size: 30px;
+  font-weight: 700;
+  color: #242059;
+  letter-spacing: -1px;
+  line-height: 27px;
+  text-align: right;
+  margin-bottom: 0;
+  transition: all 0.3s;
+}
+.box-reserva .box-check .fecha span,
+.box-reserva .box-check .dia span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #242059;
+  letter-spacing: -1px;
+  line-height: 13px;
+  text-align: center;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  transition: all 0.3s;
+}
+.box-reserva .box-check .fecha span:first-child,
+.box-reserva .box-check .dia span:first-child {
+  font-size: 12px;
+}
+.box-reserva .box-botton {
+  position: relative;
+  display: block;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  margin: 10px 15px 0 15px;
+  padding: 6px 0;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all 0.3s;
+  background-color: #faa74b;
+}
+.box-reserva .box-botton:hover,
+.box-reserva .box-botton:focus {
+  background-color: #242059;
+  color: #fff;
 }
