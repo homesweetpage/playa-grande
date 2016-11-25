@@ -4,6 +4,10 @@
   font-weight: normal;
   font-style: normal;
 }
+#map {
+  width: 70%;
+  height: 300px;
+}
 body {
   background-image: url("../images/background2.png");
   background-size: cover;
