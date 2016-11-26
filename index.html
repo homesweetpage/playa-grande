@@ -12,7 +12,7 @@
 <body>
   <!-- HEADER -->
   <header>
-    <nav class="navbar navbar-default navbar-fixed-top" role="banner">
+    <nav class="navbar navbar-default navbar-fixed-top box-shadow" role="banner">
       <div class="container">
         <!-- COLLAPSED BAR -->
         <div class="navbar-header">
@@ -45,7 +45,7 @@
   </header><!-- ./HEADER -->
 
   <!-- BOX RESERVA -->
-  <div class="box-reserva">
+  <div class="box-reserva box-shadow">
     <div class="box-img">
       <img class="img-responsive" src="images/logo1.png" alt="Logo Hostel Playa Grande" />
     </div>
@@ -71,11 +71,12 @@
             <span>sab</span>
             <span>nov</span>
           </div>
+          <input type="text" id="fecha-check-out">
         </div>
       </div>
       <div class="box-botton">
         <span>reservá ahora</span>
-      
+        <input type="submit" class="submit-reserva">
       </div>
     </form>
   </div><!-- ./BOX RESERVA -->
@@ -138,6 +139,11 @@
   <script type="text/javascript">
       $(function(){
         $("#fecha-check-in").datepicker({
+          inline: true,
+          showOtherMonths: true,
+          dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+        });
+        $("#fecha-check-out").datepicker({
           inline: true,
           showOtherMonths: true,
           dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
