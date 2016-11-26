@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Playa Grande Hostels</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link rel="shortcut icon" href="images/ico/favicon.png">
 </head>
@@ -45,7 +46,7 @@
   </header><!-- ./HEADER -->
 
   <!-- BOX RESERVA -->
-  <div class="box-reserva box-shadow">
+  <section class="box-reserva box-shadow">
     <div class="box-img">
       <img class="img-responsive" src="images/logo1.png" alt="Logo Hostel Playa Grande" />
     </div>
@@ -79,11 +80,11 @@
         <input type="submit" class="submit-reserva">
       </div>
     </form>
-  </div><!-- ./BOX RESERVA -->
+  </section><!-- ./BOX RESERVA -->
 
 
   <!-- CAROUSEL -->
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <section id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- SLIDES -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
@@ -105,29 +106,37 @@
       <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> -->
       <span class="sr-only">Next</span>
     </a><!-- ./CONTROLES -->
-  </div><!-- ./CAROUSEL -->
+  </section><!-- ./CAROUSEL -->
 
 
   <!-- UBICACION -->
-  <div id="location">
+  <section id="location" class="section-border-top">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
           <h3>Ubicación</h3>
-          <h5>PLAYA GRANDE</h5>
-          <span><a href="https://goo.gl/pBIJYd" target="_blank">Quintana 168</a></span>
-          <span>+54 (223) 451-7307</span>
-          <h5>AUSTRAL</h5>
-          <span><a href="https://goo.gl/d5sY0Z" target="_blank">Alem 3602, esquina Saavedra</a></span>
-          <span>+54 (223) 451-2396</span>
-          <h5>SUITES</h5>
-          <span><a href="https://goo.gl/W2JXwa" target="_blank">Primera Junta 201, esquina Alem</a></span>
-          <span>+54 (223) 451-2225</span>
+          <div class="playa-loc">
+            <h5>PLAYA GRANDE</h5>
+            <span><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i><a href="https://goo.gl/pBIJYd" target="_blank">Quintana 168</a></span>
+            <span><i class="fa fa-phone fa-lg" aria-hidden="true"></i>+54 (223) 451-7307</span>
+          </div>
+          <div class="playa-loc">
+            <h5>AUSTRAL</h5>
+            <span><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i><a href="https://goo.gl/d5sY0Z" target="_blank">Alem 3602, esquina Saavedra</a></span>
+            <span><i class="fa fa-phone fa-lg" aria-hidden="true"></i>+54 (223) 451-2396</span>  
+          </div>
+          <div class="playa-loc">
+            <h5>SUITES</h5>
+            <span><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i><a href="https://goo.gl/W2JXwa" target="_blank">Primera Junta 201, esquina Alem</a></span>
+            <span><i class="fa fa-phone fa-lg" aria-hidden="true"></i>+54 (223) 451-2225</span>
+          </div>
         </div>
-        <div class="col-md-8" id="map"></div>
+        <div class="col-md-8">
+          <div id="map" class="box-shadow"></div>
+        </div>
       </div>
     </div>
-  </div><!-- ./UBICACION -->
+  </section><!-- ./UBICACION -->
 
 
 
@@ -141,12 +150,12 @@
         $("#fecha-check-in").datepicker({
           inline: true,
           showOtherMonths: true,
-          dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+          dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab']
         });
         $("#fecha-check-out").datepicker({
           inline: true,
           showOtherMonths: true,
-          dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+          dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab']
         });
       });
   </script>
