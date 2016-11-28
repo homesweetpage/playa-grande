@@ -467,3 +467,104 @@ body {
 #news .box-img {
   border: 1px solid #faa74b;
 }
+#contact_form {
+  margin-top: 15%;
+}
+#success_message {
+  display: none;
+}
+#input-fecha-check-in,
+#input-fecha-check-out {
+  position: absolute;
+}
+.box-check {
+  width: 100%;
+  height: 100px;
+  padding: 0 15px;
+  display: block;
+}
+.box-check .check-in {
+  border-right: solid 1px #faa74b;
+}
+.box-check .check-in,
+.box-check .check-out {
+  position: relative;
+  background-color: rgba(255,255,255,0.4);
+  padding: 10px 15px;
+}
+.box-check .check-in:hover .fecha p,
+.box-check .check-out:hover .fecha p,
+.box-check .check-in:focus .fecha p,
+.box-check .check-out:focus .fecha p,
+.box-check .check-in:hover .dia p,
+.box-check .check-out:hover .dia p,
+.box-check .check-in:focus .dia p,
+.box-check .check-out:focus .dia p,
+.box-check .check-in:hover .fecha span,
+.box-check .check-out:hover .fecha span,
+.box-check .check-in:focus .fecha span,
+.box-check .check-out:focus .fecha span,
+.box-check .check-in:hover .dia span,
+.box-check .check-out:hover .dia span,
+.box-check .check-in:focus .dia span,
+.box-check .check-out:focus .dia span {
+  color: #faa74b;
+}
+.box-check .check-in input,
+.box-check .check-out input {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 10;
+}
+.box-check span {
+  display: block;
+  text-transform: uppercase;
+  padding-bottom: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  text-align: center;
+  color: #242059;
+  border-bottom: solid 1px #faa74b;
+}
+.box-check .fecha,
+.box-check .dia {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  float: left;
+  padding: 6px 5px;
+}
+.box-check .fecha p,
+.box-check .dia p {
+  font-size: 30px;
+  font-weight: 700;
+  color: #242059;
+  letter-spacing: -1px;
+  line-height: 27px;
+  text-align: right;
+  margin-bottom: 0;
+  transition: all 0.3s;
+}
+.box-check .fecha span,
+.box-check .dia span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #242059;
+  letter-spacing: -1px;
+  line-height: 13px;
+  text-align: center;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  transition: all 0.3s;
+}
+.box-check .fecha span:first-child,
+.box-check .dia span:first-child {
+  font-size: 12px;
+}
