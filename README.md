@@ -1,8 +1,6 @@
 # Hostel Playa Grande
 
 ## HOSTELS 
-- galeria
-- descripcion
 
 ## BOX-RESERVA
 - mouseover en ingles
@@ -20,16 +18,14 @@
 - foto
 
 ## NOVEDADES
-- titulo
-- fecha
-- cuerpo
-- imagen
-- siguiente, anterior || 1,2,3
 - share
+- newsletter
 
 ## CONTACTO
 
 ## RESERVA
+
+## FOOTER
 
 
 

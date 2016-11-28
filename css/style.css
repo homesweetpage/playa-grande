@@ -471,7 +471,6 @@ body {
 #news .box-img {
   border: 1px solid #faa74b;
 }
-<<<<<<< HEAD
 #contact_form {
   margin-top: 15%;
 }
@@ -572,7 +571,7 @@ body {
 .box-check .fecha span:first-child,
 .box-check .dia span:first-child {
   font-size: 12px;
-=======
+}
 #galery {
   padding: 100px 0;
 }
@@ -636,5 +635,4 @@ body {
 #galery .pager .pager-galery li a img {
   width: 100%;
   height: 100%;
->>>>>>> jis-galery-80p
 }
