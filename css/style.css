@@ -471,6 +471,15 @@ body {
 #news .box-img {
   border: 1px solid #faa74b;
 }
+#reservation form {
+  border-color: #faa74b;
+}
+#reservation form legend {
+  color: #242059;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom-color: #faa74b;
+}
 #contact_form {
   margin-top: 15%;
 }
@@ -478,43 +487,83 @@ body {
   display: none;
 }
 #input-fecha-check-in,
-#input-fecha-check-out {
-  position: absolute;
-}
+#input-fecha-check-out,
 .box-check {
   width: 100%;
   height: 100px;
   padding: 0 15px;
   display: block;
 }
+#input-fecha-check-in .check-in,
+#input-fecha-check-out .check-in,
 .box-check .check-in {
   border-right: solid 1px #faa74b;
 }
+#input-fecha-check-in .check-in,
+#input-fecha-check-out .check-in,
 .box-check .check-in,
+#input-fecha-check-in .check-out,
+#input-fecha-check-out .check-out,
 .box-check .check-out {
   position: relative;
   background-color: rgba(255,255,255,0.4);
   padding: 10px 15px;
 }
+#input-fecha-check-in .check-in:hover .fecha p,
+#input-fecha-check-out .check-in:hover .fecha p,
 .box-check .check-in:hover .fecha p,
+#input-fecha-check-in .check-out:hover .fecha p,
+#input-fecha-check-out .check-out:hover .fecha p,
 .box-check .check-out:hover .fecha p,
+#input-fecha-check-in .check-in:focus .fecha p,
+#input-fecha-check-out .check-in:focus .fecha p,
 .box-check .check-in:focus .fecha p,
+#input-fecha-check-in .check-out:focus .fecha p,
+#input-fecha-check-out .check-out:focus .fecha p,
 .box-check .check-out:focus .fecha p,
+#input-fecha-check-in .check-in:hover .dia p,
+#input-fecha-check-out .check-in:hover .dia p,
 .box-check .check-in:hover .dia p,
+#input-fecha-check-in .check-out:hover .dia p,
+#input-fecha-check-out .check-out:hover .dia p,
 .box-check .check-out:hover .dia p,
+#input-fecha-check-in .check-in:focus .dia p,
+#input-fecha-check-out .check-in:focus .dia p,
 .box-check .check-in:focus .dia p,
+#input-fecha-check-in .check-out:focus .dia p,
+#input-fecha-check-out .check-out:focus .dia p,
 .box-check .check-out:focus .dia p,
+#input-fecha-check-in .check-in:hover .fecha span,
+#input-fecha-check-out .check-in:hover .fecha span,
 .box-check .check-in:hover .fecha span,
+#input-fecha-check-in .check-out:hover .fecha span,
+#input-fecha-check-out .check-out:hover .fecha span,
 .box-check .check-out:hover .fecha span,
+#input-fecha-check-in .check-in:focus .fecha span,
+#input-fecha-check-out .check-in:focus .fecha span,
 .box-check .check-in:focus .fecha span,
+#input-fecha-check-in .check-out:focus .fecha span,
+#input-fecha-check-out .check-out:focus .fecha span,
 .box-check .check-out:focus .fecha span,
+#input-fecha-check-in .check-in:hover .dia span,
+#input-fecha-check-out .check-in:hover .dia span,
 .box-check .check-in:hover .dia span,
+#input-fecha-check-in .check-out:hover .dia span,
+#input-fecha-check-out .check-out:hover .dia span,
 .box-check .check-out:hover .dia span,
+#input-fecha-check-in .check-in:focus .dia span,
+#input-fecha-check-out .check-in:focus .dia span,
 .box-check .check-in:focus .dia span,
+#input-fecha-check-in .check-out:focus .dia span,
+#input-fecha-check-out .check-out:focus .dia span,
 .box-check .check-out:focus .dia span {
   color: #faa74b;
 }
+#input-fecha-check-in .check-in input,
+#input-fecha-check-out .check-in input,
 .box-check .check-in input,
+#input-fecha-check-in .check-out input,
+#input-fecha-check-out .check-out input,
 .box-check .check-out input {
   position: absolute;
   cursor: pointer;
@@ -525,6 +574,8 @@ body {
   opacity: 0;
   z-index: 10;
 }
+#input-fecha-check-in span,
+#input-fecha-check-out span,
 .box-check span {
   display: block;
   text-transform: uppercase;
@@ -536,7 +587,11 @@ body {
   color: #242059;
   border-bottom: solid 1px #faa74b;
 }
+#input-fecha-check-in .fecha,
+#input-fecha-check-out .fecha,
 .box-check .fecha,
+#input-fecha-check-in .dia,
+#input-fecha-check-out .dia,
 .box-check .dia {
   display: inline-block;
   vertical-align: middle;
@@ -544,7 +599,11 @@ body {
   float: left;
   padding: 6px 5px;
 }
+#input-fecha-check-in .fecha p,
+#input-fecha-check-out .fecha p,
 .box-check .fecha p,
+#input-fecha-check-in .dia p,
+#input-fecha-check-out .dia p,
 .box-check .dia p {
   font-size: 30px;
   font-weight: 700;
@@ -555,7 +614,11 @@ body {
   margin-bottom: 0;
   transition: all 0.3s;
 }
+#input-fecha-check-in .fecha span,
+#input-fecha-check-out .fecha span,
 .box-check .fecha span,
+#input-fecha-check-in .dia span,
+#input-fecha-check-out .dia span,
 .box-check .dia span {
   font-size: 14px;
   font-weight: 700;
@@ -568,7 +631,11 @@ body {
   margin-bottom: 0;
   transition: all 0.3s;
 }
+#input-fecha-check-in .fecha span:first-child,
+#input-fecha-check-out .fecha span:first-child,
 .box-check .fecha span:first-child,
+#input-fecha-check-in .dia span:first-child,
+#input-fecha-check-out .dia span:first-child,
 .box-check .dia span:first-child {
   font-size: 12px;
 }
