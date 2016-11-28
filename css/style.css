@@ -621,6 +621,23 @@ body {
   border: 1px solid #faa74b;
   margin-top: 40px;
 }
+#galery .pager .previous a,
+#galery .pager .next a {
+  margin: 9.5px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+#galery .pager .previous a i,
+#galery .pager .next a i {
+  color: #faa74b;
+  transition: all 0.3s;
+}
+#galery .pager .previous a:hover i,
+#galery .pager .next a:hover i {
+  color: #242059;
+}
 #galery .pager .pager-galery {
   margin: 0;
 }
