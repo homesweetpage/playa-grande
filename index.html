@@ -55,22 +55,22 @@
         <div class="col-sm-6 check-in">
           <span>check in</span>
           <div class="fecha">
-            <p>25</p>
+            <p id="fecha-check-in"></p>
           </div>
           <div class="dia">
-            <span>vie</span>
-            <span>nov</span>
+            <span id="dia-check-in"></span>
+            <span id="mes-check-in"></span>
           </div>
           <input type="text" id="fecha-check-in">
         </div>
         <div class="col-sm-6 check-out">
           <span>check out</span>
           <div class="fecha">
-            <p>26</p>
+            <p id="fecha-check-out"></p>
           </div>
-          <div class="dia">
-            <span>sab</span>
-            <span>nov</span>
+          <div id="dia-mes-check-out" class="dia">
+            <span id="dia-check-out"></span>
+            <span id="mes-check-out"></span>
           </div>
           <input type="text" id="fecha-check-out">
         </div>
@@ -123,7 +123,7 @@
           <div class="playa-loc">
             <h5>AUSTRAL</h5>
             <span><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i><a href="https://goo.gl/d5sY0Z" target="_blank">Alem 3602, esquina Saavedra</a></span>
-            <span><i class="fa fa-phone fa-lg" aria-hidden="true"></i>+54 (223) 451-2396</span>  
+            <span><i class="fa fa-phone fa-lg" aria-hidden="true"></i>+54 (223) 451-2396</span>
           </div>
           <div class="playa-loc">
             <h5>SUITES</h5>
@@ -145,19 +145,6 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/map.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script type="text/javascript">
-      $(function(){
-        $("#fecha-check-in").datepicker({
-          inline: true,
-          showOtherMonths: true,
-          dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab']
-        });
-        $("#fecha-check-out").datepicker({
-          inline: true,
-          showOtherMonths: true,
-          dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab']
-        });
-      });
-  </script>
+  <script src="js/date.js"></script>
 </body>
 </html>

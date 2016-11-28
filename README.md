@@ -4,6 +4,9 @@
 - galeria
 - descripcion
 
+## BOX-RESERVA
+- mouseover en ingles
+
 ## SERVICIOS
 - iconos
 
@@ -22,6 +25,7 @@
 - cuerpo
 - imagen
 - siguiente, anterior || 1,2,3
+- share
 
 ## CONTACTO
 

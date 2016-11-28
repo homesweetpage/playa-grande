@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Playa Grande Hostels</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="images/ico/favicon.png">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar navbar-default navbar-fixed-top box-shadow" role="banner">
+      <div class="container">
+        <!-- COLLAPSED BAR -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div><!-- ./COLLAPSED BAR -->
+        <!-- NAV CONTENT -->
+        <div class="collapse navbar-collapse navbar-center">
+          <ul class="nav navbar-nav">
+
+            <li><a class="nav-item" href="#hostels">HOSTELS</a></li>
+            <li><a class="nav-item" href="#servicios">SERVICIOS</a></li>
+            <li><a class="nav-item" href="#ubicacion">Ubicacion</a></li>
+            <li><a class="nav-item" href="#actividades">Actividades</a></li>
+            <li id="logo"><a href="#home"><img src="images/logo.png" alt="Logo Hostel Playa Grande" /></a></li>
+            <li><a class="nav-item" href="#tarifa">Tarifas</a></li>
+            <li><a class="nav-item" href="#novedades">Novedades</a></li>
+            <li><a class="nav-item" href="#contacto">Contacto</a></li>
+            <li><a class="nav-item" href="#reserva">Reservar</a></li>
+            <li class="flag-container"><a href="#"><img class="flag" src="images/ico/usa.png" /></a></li>
+            <li class="flag-container"><a href="index.html"><img class="flag" src="images/ico/arg.png" /></a></li>
+          </ul>
+        </div><!-- ./NAV CONTENT -->
+      </div>
+    </nav>
+  </header><!-- ./HEADER -->
+
+  <!-- BOX RESERVA -->
+  <section class="box-reserva box-shadow">
+    <div class="box-img">
+      <img class="img-responsive" src="images/logo1.png" alt="Logo Hostel Playa Grande" />
+    </div>
+    <form action="#">
+      <div class="box-check">
+        <div class="col-sm-6 check-in">
+          <span>check in</span>
+          <div class="fecha">
+            <p id="fecha-check-in"></p>
+          </div>
+          <div class="dia">
+            <span id="dia-check-in"></span>
+            <span id="mes-check-in"></span>
+          </div>
+          <input type="text" id="fecha-check-in">
+        </div>
+        <div class="col-sm-6 check-out">
+          <span>check out</span>
+          <div class="fecha">
+            <p id="fecha-check-out"></p>
+          </div>
+          <div id="dia-mes-check-out" class="dia">
+            <span id="dia-check-out"></span>
+            <span id="mes-check-out"></span>
+          </div>
+          <input type="text" id="fecha-check-out">
+        </div>
+      </div>
+      <div class="box-botton">
+        <span>reservá ahora</span>
+        <input type="submit" class="submit-reserva">
+      </div>
+    </form>
+  </section><!-- ./BOX RESERVA -->
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/date.js"></script>
+</body>
+</html>
