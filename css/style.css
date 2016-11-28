@@ -173,6 +173,11 @@
   background: #f4f4f4;
   color: #b4b3b3;
 }
+@media (min-width: 992px) {
+  #news .box-text-news {
+    padding-right: 50px;
+  }
+}
 body {
   background-image: url("../images/background2.png");
   background-size: cover;
@@ -184,6 +189,20 @@ body {
 }
 .section-border-top {
   border-top: 1px solid #0153a5;
+}
+.box-primario {
+  text-align: center;
+}
+.box-primario .box-titulo-primario {
+  display: inline-block;
+  border-bottom: 2px solid #faa74b;
+  margin-bottom: 10px;
+}
+.box-primario .box-titulo-primario h1 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #242059;
 }
 .flag {
   width: 23px;
@@ -400,4 +419,50 @@ body {
 }
 #location .playa-loc span a:hover {
   color: #faa74b;
+}
+#news {
+  padding: 100px 0;
+  background-color: #fff;
+}
+#news h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #242059;
+  margin-bottom: 0;
+}
+#news span {
+  display: block;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: bold;
+  color: #faa74b;
+  margin-bottom: 20px;
+}
+#news span i {
+  margin-right: 5px;
+  width: 12px;
+}
+#news p {
+  color: #000;
+  font-size: 15px;
+  text-align: justify;
+}
+#news .pager {
+  margin: 40px 0 50px;
+}
+#news .pager li a {
+  color: #faa74b;
+  background-color: #fff;
+  border: 1px solid #faa74b;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+#news .pager li a:hover,
+#news .pager li a:focus {
+  color: #fff;
+  background-color: #242059;
+  border: 1px solid #242059;
+}
+#news .box-img {
+  border: 1px solid #faa74b;
 }
