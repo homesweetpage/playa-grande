@@ -259,6 +259,7 @@ body {
   z-index: 2;
   border: solid 1px rgba(36,32,89,0.5);
   visibility: hidden;
+  display: none !important;
 }
 .box-reserva .box-img {
   width: 100%;
