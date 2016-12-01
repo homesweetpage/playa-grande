@@ -1,0 +1,40 @@
+#galery2
+	padding 100px 0
+	
+	.titulo-galery
+		text-align center
+		margin-top 50px
+		margin-bottom 50px
+		
+		a
+			color $blue
+			font-weight 700
+			text-decoration none
+			transition all 0.3s
+			text-transform uppercase
+			
+			&:hover
+			&:focus
+				color $orange
+				
+			&.active
+				color $light-blue
+				cursor default
+				
+	.foto-galery
+		height 270px
+		margin-bottom 30px
+		
+		.box-img
+			height 100%
+			width 100%
+			overflow hidden
+			
+			img
+				height 100%
+				width 100%
+				transition all 0.3s
+				cursor pointer
+				
+				&:hover
+					transform scale(1.25)
