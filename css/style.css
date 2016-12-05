@@ -207,6 +207,54 @@ body {
   font-weight: 700;
   color: #242059;
 }
+.box-primario-orange {
+  text-align: center;
+}
+.box-primario-orange .box-titulo-primario {
+  display: inline-block;
+  border-bottom: 2px solid #242059;
+  margin-bottom: 10px;
+}
+.box-primario-orange .box-titulo-primario h1 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #faa74b;
+}
+.btn-enviar-blue {
+  color: #fff;
+  background-color: #242059;
+  border-color: #0153a5;
+  transition: all 0.3s;
+}
+.btn-enviar-blue:hover,
+.btn-enviar-blue:focus {
+  color: #fff;
+  background-color: #0153a5;
+  border-color: #242059;
+}
+.btn-enviar-orange {
+  color: #fff;
+  background-color: #faa74b;
+  border-color: #fa8f18;
+  transition: all 0.3s;
+}
+.btn-enviar-orange:hover,
+.btn-enviar-orange:focus {
+  color: #fff;
+  background-color: #fa8f18;
+  border-color: #faa74b;
+}
+form.form-orange input:focus,
+form.form-orange textarea:focus,
+form.form-orange select:focus {
+  border-color: #fa8f18;
+}
+form.form-blue input:focus,
+form.form-blue textarea:focus,
+form.form-blue select:focus {
+  border-color: #0153a5;
+}
 .flag {
   width: 23px;
 }
@@ -638,4 +686,19 @@ body {
 }
 #galery2 .foto-galery .box-img img:hover {
   transform: scale(1.25);
+}
+#contacts {
+  padding: 100px 0;
+  background-color: #faa74b;
+}
+#services {
+  padding: 100px 0;
+  background-color: #3f3e40;
+}
+#services .servicios {
+  text-align: center;
+  height: 100px;
+}
+#services .servicios h5 {
+  color: #fff;
 }
