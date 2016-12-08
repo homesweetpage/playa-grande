@@ -13,6 +13,7 @@
 	background-size cover
 	border-color transparent
 	z-index 1
+	border-bottom 4px solid $orange
 
 	.navbar-nav
 		display inline-block
@@ -21,6 +22,61 @@
 
 	.navbar-collapse
 		text-align center
+		
+	.btn-reserva
+		position absolute
+		height 40px
+		width 150px
+		background-color $orange
+		bottom -40px
+		border-bottom-right-radius 20px
+		border-bottom-left-radius 20px
+		
+		.btn-border-top-left
+			position absolute
+			height 20px
+			width 20px
+			bottom 16px
+			left -20px
+			overflow hidden
+			
+			.border-circle-left
+				width 100%
+				height 100%
+				background-color transparent
+				border-top-right-radius 100%
+				box-shadow 50px -50px 0px 50px $orange
+				
+		.btn-border-top-right
+			position absolute
+			height 20px
+			width 20px
+			bottom 16px
+			right -20px
+			overflow hidden
+			
+			.border-circle-right
+				width 100%
+				height 100%
+				background-color transparent
+				border-top-left-radius 100%
+				box-shadow 50px -50px 0px 50px $orange
+				
+		button
+			font-family 'bebas_neueregular'
+			font-weight 700
+			letter-spacing 2px
+			width 100%
+			height 100%
+			background-color transparent
+			color $white
+			border none
+			transition all 0.3s
+			
+			&:hover
+			&:focus
+				text-shadow 2px 2px $blue
+				outline none
 
 .collapse
 
@@ -50,8 +106,9 @@
 		color $orange !important
 
 #logo
-	height 80px
-	padding 5px
+	height 76px
+	padding 5px 5px 0
+	background-color rgba($white, 0.4) !important
 	
 	a
 		
