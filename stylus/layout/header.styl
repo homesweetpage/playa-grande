@@ -12,7 +12,7 @@
 	background-image url('../images/nav.png')
 	background-size cover
 	border-color transparent
-	z-index 1
+	z-index 3
 	border-bottom 4px solid $orange
 
 	.navbar-nav
@@ -170,25 +170,25 @@
 .box-reserva
 	position fixed
 	width 300px
+	height calc(100vh - 76px)
 	padding 0 0 40px 0
-	left 5vw
-	top 23vh
+	left 35px
+	top 76px
 	background-color rgba($white, 0.5)
 	z-index 2
-	border solid 1px rgba($blue, 0.5)
+	border solid 4px $orange
 	visibility hidden
 	text-align center
-	display none
 	
 	.box-img
 		width 100%
-		padding 5% 15px 20px 15px
+		padding 45px 15px 20px 15px
 
 	.box-check
 		width 100%
-		height 100px
+		margin-bottom 15px
 		padding 0 15px
-		display block
+		display inline-block
 
 		.check-in
 			border-right solid 1px rgba($orange, 1)
@@ -268,6 +268,27 @@
 
 				&:first-child
 					font-size 12px
+					
+	.box-inputs
+		padding 0 15px
+		margin-bottom 15px
+		
+		.input-group
+			margin-bottom 7.5px
+			
+			span
+				padding 5px 10px
+				border 1px solid $orange
+				background-color rgba($white, 0.6)
+				
+				i
+					color $blue
+		
+			input
+			select
+				height 28px
+				background-color rgba($white, 0.8)
+				border none
 
 	.box-botton
 		position relative
