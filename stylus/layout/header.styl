@@ -170,8 +170,7 @@
 .box-reserva
 	position fixed
 	width 300px
-	height calc(100vh - 76px)
-	padding 0 0 40px 0
+	height 562px
 	left 35px
 	top 76px
 	background-color rgba($white, 0.5)
@@ -182,11 +181,11 @@
 	
 	.box-img
 		width 100%
-		padding 45px 15px 20px 15px
+		padding 45px 15px 10px 15px
 
 	.box-check
 		width 100%
-		margin-bottom 15px
+		margin-bottom 10px
 		padding 0 15px
 		display inline-block
 
@@ -271,7 +270,7 @@
 					
 	.box-inputs
 		padding 0 15px
-		margin-bottom 15px
+		margin-bottom 10px
 		
 		.input-group
 			margin-bottom 7.5px
@@ -283,12 +282,18 @@
 				
 				i
 					color $blue
+					width 16px
 		
 			input
 			select
 				height 28px
 				background-color rgba($white, 0.8)
 				border none
+				color #999
+				
+			&.pull-left
+			&.pull-right
+				width calc((100% / 2) - (7.5px / 2))
 
 	.box-botton
 		position relative
@@ -298,7 +303,7 @@
 		text-transform uppercase
 		cursor pointer
 		border none
-		margin 10px 15px 0 15px
+		margin 2.5px 15px 0 15px
 		padding 3px 30px
 		font-size 15px
 		font-weight 700
