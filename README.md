@@ -48,6 +48,7 @@
 
 ## CONTACTO
 -mail
+-iconos y placeholders
 
 
 ## FOOTER
