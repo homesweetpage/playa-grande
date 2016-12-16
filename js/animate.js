@@ -15,6 +15,7 @@ var classAnimateReservaUp = "slideOutUp";
 var noneDisplay = "none-display";
 var clickReserva = false;
 var inAnimate = true;
+var inTransition = false;
 var endAnimate = "webkitAnimationEnd mozAnimationEnd oAnimationEnd animationEnd"
 var responsiveWidth = 768;
 
@@ -36,7 +37,7 @@ function AnimateReserva(classAnimate, hasDisplay) {
 }
 
 function AnimateService(scrollPos) {
-	$boxService.each(function(i){
+	$boxService.each(function (i){
 		if (scrollPos >= $(this).position().top - 450) {
 			if (i%2 == 0) {
 				$(this).addClass('bounceInRight');
@@ -49,7 +50,7 @@ function AnimateService(scrollPos) {
 }
 
 function AnimateGalery(scrollPos) {
-	$boxGalery.each(function(i){
+	$boxGalery.each(function (i){
 		if (scrollPos >= $(this).position().top - 450) {
 			if (i%2 == 0) {
 				$(this).addClass('bounceInRight');
@@ -75,7 +76,16 @@ function ActiveNav(scrollPos) {
 	};
 }
 
-$(document).ready(function() {
+function TransitionNav(target) {
+	inTransition = true;
+	$('html, body').animate({
+		scrollTop: target.offset().top
+	}, 1500, function (){
+		inTransition = false;
+	});
+}
+
+$(document).ready(function () {
 	w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 	var scrollPos = $(this).scrollTop();
 
@@ -90,7 +100,7 @@ $(document).ready(function() {
 	ActiveNav(scrollPos);
 });
 
-$(document).on('scroll', function() {
+$(document).on('scroll', function () {
 	w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 	var scrollPos = $(this).scrollTop();
 
@@ -112,7 +122,7 @@ $(document).on('scroll', function() {
 	ActiveNav(scrollPos);
 });
 
-$('.btn-reserva').on('click', function() {
+$('.btn-reserva').on('click', function () {
 	w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
 	if (w >= responsiveWidth && !inAnimate) {
@@ -124,6 +134,24 @@ $('.btn-reserva').on('click', function() {
 			AnimateReserva(classAnimateReservaUp, hasDisplay);
 		};
 	} else {
-		// Anchor
+		if (!inTransition) {
+			TransitionNav($boxReserva);
+		};
+	};
+})
+
+$(".anchor-link a").on("click", function (e){
+	e.preventDefault();
+	if (!inTransition) {
+		var target = $(this.hash);
+		TransitionNav(target);
+	};
+})
+
+$("#logo a").on("click", function (e){
+	e.preventDefault();
+	if (!inTransition) {
+		var target = $('html, body');
+		TransitionNav(target);
 	};
 })
