@@ -1,4 +1,12 @@
 var w;
+var $hostelSection = $('#hostels');
+var $serviceSection = $('#services');
+var $locationSection = $('#location');
+//var $actividadSection = $('#actividades');
+var $tarifaSection = $('#tarifas');
+var $newsSection = $('#news');
+var $contactSection = $('#contacts');
+var arrSections = [$hostelSection, $serviceSection, $locationSection, $tarifaSection, $newsSection, $contactSection];
 var $boxReserva = $('.box-reserva');
 var $boxService = $('.box-servicios');
 var $boxGalery = $('.foto-galery');
@@ -53,6 +61,20 @@ function AnimateGalery(scrollPos) {
 	});
 }
 
+function ActiveNav(scrollPos) {
+	for (var i = 0; i < arrSections.length; i++) {
+		var sectionTop = arrSections[i].position().top - 80;
+		var sectionBottom = arrSections[i].position().top + arrSections[i].outerHeight(true) - 80;
+		var sectionId = arrSections[i].attr('id');
+		var li_href = $('a[href="#'+sectionId+'"]').parent();
+		if ((sectionTop <= scrollPos) && (scrollPos <= sectionBottom)){
+			li_href.addClass('active');
+		} else {
+			li_href.removeClass('active');
+		};
+	};
+}
+
 $(document).ready(function() {
 	w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 	var scrollPos = $(this).scrollTop();
@@ -64,6 +86,8 @@ $(document).ready(function() {
 
 	AnimateService(scrollPos);
 	AnimateGalery(scrollPos);
+
+	ActiveNav(scrollPos);
 });
 
 $(document).on('scroll', function() {
@@ -74,7 +98,7 @@ $(document).on('scroll', function() {
 		var $mC = $('#mainCarousel');
 		var bottomC = $mC.position().top + $mC.offset().top + $mC.outerHeight(true);
 		
-		if (scrollPos >= bottomC - 150) {
+		if (scrollPos >= bottomC - 250) {
 			var hasDisplay = $boxReserva.hasClass(noneDisplay);
 			if (!hasDisplay && !clickReserva) {
 				AnimateReserva(classAnimateReservaUp, hasDisplay);
@@ -84,6 +108,8 @@ $(document).on('scroll', function() {
 
 	AnimateService(scrollPos);
 	AnimateGalery(scrollPos);
+
+	ActiveNav(scrollPos);
 });
 
 $('.btn-reserva').on('click', function() {
