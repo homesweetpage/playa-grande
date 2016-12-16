@@ -21,7 +21,6 @@ $("#boton-reserva").click(function(event) {
     var female = $("#female").val();
     var hostel = $("#hostel").val();
     var room = $("#room").val();
-    debugger;
     var data = {
       "first_name": nombre,
       "last_name": apellido,
