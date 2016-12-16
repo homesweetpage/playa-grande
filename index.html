@@ -94,50 +94,50 @@
       <div class="box-inputs">
         <div class="input-group">
           <span class="input-group-addon"><i class="fa fa-user"></i></span>
-          <input name="first_name" placeholder="Nombre" class="form-control"  type="text">
+          <input id="first_name" name="first_name" placeholder="Nombre" class="form-control"  type="text">
         </div>
         <div class="input-group">
           <span class="input-group-addon"><i class="fa fa-user"></i></span>
-          <input name="last_name" placeholder="Apellido" class="form-control"  type="text">
+          <input id="last_name" name="last_name" placeholder="Apellido" class="form-control"  type="text">
         </div>
         <div class="input-group">
           <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-          <input name="email" placeholder="Mail" class="form-control"  type="email">
+          <input id="email" name="email" placeholder="Mail" class="form-control"  type="email">
         </div>
         <div class="input-group pull-left">
           <span class="input-group-addon"><i class="fa fa-male"></i></span>
-          <input name="male" value="0" class="form-control"  type="number">
+          <input id="male" name="male" value="0" class="form-control"  type="number">
         </div>
         <div class="input-group pull-right">
           <span class="input-group-addon"><i class="fa fa-female"></i></span>
-          <input name="female" value="0" class="form-control"  type="number">
+          <input id="female" name="female" value="0" class="form-control"  type="number">
         </div>
         <div class="input-group">
           <span class="input-group-addon"><i class="fa fa-bed"></i></span>
-          <select name="room" class="form-control selectpicker" >
-            <option value="0">Single c/baño privado</option>
-            <option value="1">Doble 2 camas c/baño privado</option>
-            <option value="2">Doble matrimonial camas c/baño privado</option>
-            <option value="3">Triple c/baño privado</option>
-            <option value="4">Cuadruple c/baño privado</option>
-            <option value="5">5/6 c/baño privado</option>
-            <option value="6">8 c/baño privado</option>
+          <select id="room" name="room" class="form-control selectpicker" >
+            <option value="Single c/baño privado">Single c/baño privado</option>
+            <option value="Doble 2 camas c/baño privado">Doble 2 camas c/baño privado</option>
+            <option value="Doble matrimonial camas c/baño privado">Doble matrimonial camas c/baño privado</option>
+            <option value="Triple c/baño privado">Triple c/baño privado</option>
+            <option value="Cuadruple c/baño privado">Cuadruple c/baño privado</option>
+            <option value="5/6 c/baño privado">5/6 c/baño privado</option>
+            <option value="8 c/baño privado">8 c/baño privado</option>
           </select>
         </div>
         <div class="input-group">
           <span class="input-group-addon"><i class="fa fa-home"></i></span>
-          <select name="hostel" class="form-control selectpicker" >
-            <option value="any">Todos los hostels</option>
-            <option value="hpg">Playa Grande</option>
-            <option value="hpga">Playa Grande Austral</option>
-            <option value="hpgs">Playa Grande Suites</option>
+          <select id="hostel" name="hostel" class="form-control selectpicker" >
+            <option value="Todos los hostels">Todos los hostels</option>
+            <option value="Playa Grande">Playa Grande</option>
+            <option value="Playa Grande Austral">Playa Grande Austral</option>
+            <option value="Playa Grande Suites">Playa Grande Suites</option>
           </select>
         </div>
       </div>
 
       <div class="box-botton">
         <span>Consulta <br> Disponibilidad</span>
-        <input type="submit" class="submit-reserva">
+        <input id="boton-reserva" type="submit" class="submit-reserva">
       </div>
     </form>
   </section><!-- ./BOX RESERVA -->
@@ -620,5 +620,6 @@
   <script src="js/modal.js"></script>
   <script src="js/descripciones.js"></script>
   <script src="js/anchors.js"></script>
+  <script src="js/reserva.js"></script>
 </body>
 </html>

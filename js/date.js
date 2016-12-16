@@ -1,6 +1,8 @@
 var currentDate = new Date();
 var tomorrow = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
 
+
+
 function inicializarFecha(){
   document.getElementById("fecha-check-in").innerHTML = currentDate.getDate();
   document.getElementById("fecha-check-out").innerHTML = tomorrow.getDate();

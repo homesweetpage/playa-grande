@@ -4,21 +4,25 @@ if($_POST){
     $name = $_REQUEST['first_name'];
     $apellido = $_REQUEST['last_name'];
     $email = $_REQUEST['email'];
-    $phone = $_REQUEST['phone'];
+    $male = $_REQUEST['male'];
+    $female = $_REQUEST['female'];
     $hostel = $_REQUEST['hostel'];
     $room = $_REQUEST['room'];
-    $comment = $_REQUEST['comment'];
+    $checkIn = $_REQUEST['checkIn'];
+    $checkOut = $_REQUEST['checkOut'];
 
     $to = "tomasgispert@gmail.com";
 
     $mensaje =
 		"Nombre: " .$name ."\r\n"
     ."Apellido: " .$apellido ."\r\n"
-		."Telefono: " .$phone ."\r\n"
-		."Email: " .$email ."\r\n"
+		."Email: " .$email ."\r\n" ."\r\n"
+    ."Check In: " .$checkIn ."\r\n"
+    ."Check Out: " .$checkOut ."\r\n" ."\r\n"
+    ."Cantidad de hombres: " .$male ."\r\n"
+    ."Cantidad de mujeres: " .$female ."\r\n"
     ."Hostel: " .$hostel ."\r\n"
     ."Habitacion: " .$room ."\r\n"
-		."Comentario: " .$comment
 		;
 
 	$subject = "HPG - Consulta de: " .$email;
