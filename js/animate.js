@@ -162,7 +162,7 @@ $(".box-reserva").on("click", function (){
 	console.log(span, error);
 	$(".box-botton").addClass('flipOutX').one(endAnimate, function(){
 		$span.html(error);
-		$(".box-botton").addClass('redClass');
+		$(".box-botton").addClass('btnSuccess');
 		$(".box-botton").removeClass('flipOutX');
 		$(".box-botton").addClass('flipInX').one(endAnimate, function(){
 
