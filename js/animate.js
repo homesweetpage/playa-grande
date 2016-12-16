@@ -155,3 +155,18 @@ $("#logo a").on("click", function (e){
 		TransitionNav(target);
 	};
 })
+
+$(".box-reserva").on("click", function (){
+	var $span = $(".box-botton span");
+	var error = 'Error! <br> Mensaje No Enviado';
+	console.log(span, error);
+	$(".box-botton").addClass('flipOutX').one(endAnimate, function(){
+		$span.html(error);
+		$(".box-botton").addClass('redClass');
+		$(".box-botton").removeClass('flipOutX');
+		$(".box-botton").addClass('flipInX').one(endAnimate, function(){
+
+		})
+
+	})
+})
