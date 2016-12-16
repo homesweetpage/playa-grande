@@ -95,5 +95,4 @@ function formatoCalendario(){
 $(document).ready(function(){
   inicializarFecha();
   formatoCalendario();
-  $(".box-reserva").css({"visibility":"visible"});
 });

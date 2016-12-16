@@ -37,11 +37,17 @@
   
 .slideInDown
 	animation-name slideInDown
-	animation-duration 3s
+	animation-duration 1.5s
 	animation-fill-mode both
 	animation-iteration-count 1
-	animation-delay 1s
 	animation-timing-function ease-out
+ 
+.slideOutUp
+  animation-name slideOutUp
+  animation-duration 1.5s
+  animation-fill-mode both
+  animation-iteration-count 1
+  animation-timing-function ease-in
   
 @keyframes zoom
 	from
@@ -52,6 +58,14 @@
 @keyframes slideInDown
 	0%
 		opacity 0
-		transform translateY(-2000px)
+		transform translateY(-1000px)
 	100%
 		transform translateY(0)
+  
+@keyframes slideOutUp
+  0%
+    transform translateY(0)
+
+  100%
+    opacity 0
+    transform translateY(-1000px)  
