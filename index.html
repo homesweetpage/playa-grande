@@ -233,10 +233,10 @@
     <!-- GALERIA 2 -->
     <section id="galery2" class="section-border-top">
 
-      <div id="galeryModal" class="modal">
+      <div id="galeryModal" class="gmodal">
 
         <!-- The Close Button -->
-        <span class="close" onclick="document.getElementById('galeryModal').style.display='none'">&times;</span>
+        <span class="gclose" onclick="document.getElementById('galeryModal').style.display='none'">&times;</span>
 
         <!-- Modal Content (The Image) -->
         <img class="modal-content" id="imgModal">
@@ -464,6 +464,28 @@
 
   <!-- ACTIVIDADES -->
   <section id="activities" class="section-border-top">
+
+    <div id="activitiesModal" class="amodal">
+      <!-- Body Modal -->
+      <div class="bodyModal">
+        <div class="headerModal">
+          <!-- The Close Button -->
+          <span class="aclose" onclick="document.getElementById('activitiesModal').style.display='none'">&times;</span>
+          <!-- Titulo -->
+          <h3 id="tituloModal"></h3>
+        </div>
+        <div class="footerModal" id="textoModal">
+          
+        </div>
+      </div>
+
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="imgModal">
+
+      <!-- Modal Caption (Image Text) -->
+      <div id="imgCaption"></div>
+    </div>
+
     <div class="container">
       <div class="row box-primario">
         <div class="box-titulo-primario">
@@ -471,63 +493,139 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 custom-padding">
+        <div class="col-md-4 col-sm-6 custom-padding">
           <div class="box-actividades">
             <div class="box-top">
               <img src="images/actividades/windsurf.png" alt="windsurf">
             </div>
             <div class="box-bot">
               <span>Wind Surf</span>
+              <div class="texto">
+                <p>El windsurf es una combinación entre la vela y el surf. El aprendizaje, incluye el manejo de la vela y las técnicas con la tabla.</p>
+                <p>Locación: Dependiendo condiciones climáticas y de tu nivel presentamos dos alternativas:</p>
+                <p>Aguas cerradas: dentro del puerto de Mar del Plata, con base en el Centro Naval, salimos de una playa segura para que intentes tus primeros bordes en el mar. Este
+espacio es ideal para principiantes, mujeres, niños ó para aquellos amantes del slalom y la velocidad ya que dentro de las tranquilas aguas del puerto las velocidades
+que se obtienen con fuertes vientos son impresionantes.</p>
+                <p>Aguas abiertas: de acuerdo al nivel del navegante podemos salir a surfear olas en la escollera sur del puerto de Mar del Plata con olas que superan los 3 mts. y buena
+rompiente, o salir desde la playa en Playa Grande ó Punta Mogotes. Surfear las olas de escollera sur es una de las experiencias de mar abierto más radicales ya que es
+una ola de profundidad que se engrosa rapidamente por el banco de arena producido por la escollera y llega a romper con fuerza, para luego volverse a engrosar y
+seguir hasta la Playa Grande, donde surfers de todas partes se reunen para correr esta ola. Si hay buen viento, preferentemente NE, esta ola tiene cientos de metros
+para surfearla y divertirse. Otras opciones es salidas con menos olas desde Punta Mogotes o la Playa Grande junto a la escollera norte.</p>
+                <p>Descripción: Instrucción Teórico- Practica, equipos (tabla, vela, y traje de neoprene) y traslados.</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4 custom-padding">
+        <div class="col-md-4 col-sm-6 custom-padding">
           <div class="box-actividades">
             <div class="box-top">
-              <img src="images/actividades/windsurf.png" alt="windsurf">
+              <img src="images/actividades/kayak.png" alt="kayak">
             </div>
             <div class="box-bot">
-              <span>Wind Surf</span>
+              <span>Kayak</span>
             </div>
           </div>
         </div>
-        <div class="col-md-4 custom-padding">
+        <div class="col-md-4 col-sm-6 custom-padding">
           <div class="box-actividades">
             <div class="box-top">
-              <img src="images/actividades/windsurf.png" alt="windsurf">
+              <img src="images/actividades/bike tours en sierra la brava.png" alt="bike tours">
             </div>
             <div class="box-bot">
-              <span>Wind Surf</span>
+              <span>Bike Tours</span>
             </div>
           </div>
         </div>
-        <div class="col-md-4 custom-padding">
+        <div class="col-md-4 col-sm-6 custom-padding">
           <div class="box-actividades">
             <div class="box-top">
-              <img src="images/actividades/windsurf.png" alt="windsurf">
+              <img src="images/actividades/cursos de español.png" alt="cursos de español">
             </div>
             <div class="box-bot">
-              <span>Wind Surf</span>
+              <span>Cursos De Español</span>
             </div>
           </div>
         </div>
-        <div class="col-md-4 custom-padding">
+        <div class="col-md-4 col-sm-6 custom-padding">
           <div class="box-actividades">
             <div class="box-top">
-              <img src="images/actividades/windsurf.png" alt="windsurf">
+              <img src="images/actividades/escalada - rappel - tirolesa.png" alt="Rappel">
             </div>
             <div class="box-bot">
-              <span>Wind Surf</span>
+              <span>Escalada - Tirolesa</span>
             </div>
           </div>
         </div>
-        <div class="col-md-4 custom-padding">
+        <div class="col-md-4 col-sm-6 custom-padding">
           <div class="box-actividades">
             <div class="box-top">
-              <img src="images/actividades/windsurf.png" alt="windsurf">
+              <img src="images/actividades/kartings.png" alt="kartings">
             </div>
             <div class="box-bot">
-              <span>Wind Surf</span>
+              <span>Kartings</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 custom-padding">
+          <div class="box-actividades">
+            <div class="box-top">
+              <img src="images/actividades/kite surf.png" alt="kite surf">
+            </div>
+            <div class="box-bot">
+              <span>Kite Surf</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 custom-padding">
+          <div class="box-actividades">
+            <div class="box-top">
+              <img src="images/actividades/navegacion a vela.png" alt="navegacion a vela">
+            </div>
+            <div class="box-bot">
+              <span>Navegacion a Vela</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 custom-padding">
+          <div class="box-actividades">
+            <div class="box-top">
+              <img src="images/actividades/paracaidismo.png" alt="paracaidismo">
+            </div>
+            <div class="box-bot">
+              <span>Paracaidismo</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 custom-padding">
+          <div class="box-actividades">
+            <div class="box-top">
+              <img src="images/actividades/surf.png" alt="surf">
+            </div>
+            <div class="box-bot">
+              <span>Surf</span>
+              <div class="texto">
+                <p>Las clases son dictadas por surfistas profesionales, en Mar del Plata Surf School, ubicada a dos cuadras de nuestro Hostel en el Break Point Biología – Playa Grande.
+La escuela esta abierta a todos los niveles, desde principiantes que quieren iniciarse a intermedios que quieren mejorar su técnica.. Los que ya tienen experiencia y no
+quieren tomar clases pueden optar por los surfaris organizados a los mejores points de la zona con guías locales.</p>
+                <p>SERVICIOS INCLUIDOS</p>
+                <p>20 minutos de ejercicios de relajación e instrucción teórica, 70 minutos de Surf, incluye tabla y traje de neoprene, durante la clase se desarrollan los puntos que se
+enumeran a continuación.</p>
+                <p>• Técnicas básicas y capacitación en el agua. De acostado a parado.</p>
+                <p>• Goofy o Regular. Tu posición en el surf.</p>
+                <p>• Refinamiento de las técnicas. Remando y tomando tus propias olas</p>
+                <p>• Rescates.</p>
+                <p>Existe la posibilidad de realizar cursos intensivos y surf camps la duración de los mismos es de una semana y a continuación se exponen las distintas opciones.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 custom-padding">
+          <div class="box-actividades">
+            <div class="box-top">
+              <img src="images/actividades/trekking.png" alt="trekking">
+            </div>
+            <div class="box-bot">
+              <span>Trekking</span>
             </div>
           </div>
         </div>
