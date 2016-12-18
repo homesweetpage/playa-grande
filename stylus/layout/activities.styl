@@ -8,7 +8,7 @@
 	.box-actividades
 		position relative
 		width 100%
-		height 100px
+		height 200px
 		border 2px solid $light-blue
 		overflow hidden
 		cursor pointer
@@ -23,28 +23,34 @@
 			height 100%
 			
 			img
+				position absolute
 				width 100%
+				top -20px
 			
 		.box-bot
 			transition: all 0.5s ease
 			position absolute
-			top 96px
+			top 196px
 			left 0
 			background-color $light-blue
 			width 100%
 			height 100%
 			text-align center
-			line-height 96px
+			line-height 196px
 			
 			span
 				color $white
 				font-size 30px
 				font-weight 700
+				text-transform uppercase
+				
+			.texto
+				display none
 			
 		&:hover
 			
 			.box-top
-				top -96px
+				top -196px
 				
 			.box-bot
 				top 0

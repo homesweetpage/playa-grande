@@ -14,24 +14,24 @@ var classAnimateReservaDown = "slideInDown";
 var classAnimateReservaUp = "slideOutUp";
 var noneDisplay = "none-display";
 var clickReserva = false;
-var inAnimate = true;
+var inAnimateReserva = true;
 var inTransition = false;
 var endAnimate = "webkitAnimationEnd mozAnimationEnd oAnimationEnd animationEnd"
 var responsiveWidth = 768;
 
 function AnimateReserva(classAnimate, hasDisplay) {
-	inAnimate = true;
+	inAnimateReserva = true;
 	if (hasDisplay) {
 		$boxReserva.removeClass(noneDisplay);
 		$boxReserva.addClass(classAnimate).one(endAnimate, function(){
 			$(this).removeClass(classAnimate);
-			inAnimate = false;
+			inAnimateReserva = false;
 		});
 	} else {
 		$boxReserva.addClass(classAnimate).one(endAnimate, function(){
 			$(this).removeClass(classAnimate);
 			$(this).addClass(noneDisplay);
-			inAnimate = false;
+			inAnimateReserva = false;
 		});
 	};	
 }
@@ -104,7 +104,7 @@ $(document).on('scroll', function () {
 	w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 	var scrollPos = $(this).scrollTop();
 
-	if (w >= responsiveWidth && !inAnimate) {
+	if (w >= responsiveWidth && !inAnimateReserva) {
 		var $mC = $('#mainCarousel');
 		var bottomC = $mC.position().top + $mC.offset().top + $mC.outerHeight(true);
 		
@@ -125,14 +125,16 @@ $(document).on('scroll', function () {
 $('.btn-reserva').on('click', function () {
 	w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-	if (w >= responsiveWidth && !inAnimate) {
-		var hasDisplay = $boxReserva.hasClass(noneDisplay);
-		clickReserva = true;
-		if (hasDisplay) {
-			AnimateReserva(classAnimateReservaDown, hasDisplay);
-		} else {
-			AnimateReserva(classAnimateReservaUp, hasDisplay);
-		};
+	if (w >= responsiveWidth){
+		if (!inAnimateReserva) {
+			var hasDisplay = $boxReserva.hasClass(noneDisplay);
+			clickReserva = true;
+			if (hasDisplay) {
+				AnimateReserva(classAnimateReservaDown, hasDisplay);
+			} else {
+				AnimateReserva(classAnimateReservaUp, hasDisplay);
+			};
+		}
 	} else {
 		if (!inTransition) {
 			TransitionNav($boxReserva);
@@ -159,7 +161,6 @@ $("#logo a").on("click", function (e){
 $(".box-reserva").on("click", function (){
 	var $span = $(".box-botton span");
 	var error = 'Error! <br> Mensaje No Enviado';
-	console.log(span, error);
 	$(".box-botton").addClass('flipOutX').one(endAnimate, function(){
 		$span.html(error);
 		$(".box-botton").addClass('btnSuccess');
@@ -170,3 +171,31 @@ $(".box-reserva").on("click", function (){
 
 	})
 })
+
+$(".box-hostel-titulo").click(function(){
+	if($(this).hasClass("descripcion-activa")){
+		$(this).find(".box-descripcion").addClass("hidden");
+		$(this).find("i").removeClass("fa-minus").addClass("fa-plus");
+		$(this).removeClass("descripcion-activa");
+	}
+	else {
+		$(".box-hostel-desc").find(".box-descripcion").addClass("hidden");
+		$(".box-hostel-desc").find(".box-hostel-titulo").removeClass("descripcion-activa");
+		$(".box-hostel-desc").find("i").removeClass("fa-minus").addClass("fa-plus");
+		if($(this).find(".pg-descr").html()[0]=="P"){
+			$("#img-descripcion").attr("src","images/descripciones/Playa Grande.jpg");
+		}
+		else {
+			if($(this).find(".pg-descr").html()[0]=="A"){
+				$("#img-descripcion").attr("src","images/descripciones/Austral.jpg");
+			}
+			else {
+				$("#img-descripcion").attr("src","images/descripciones/Suites.jpg");
+			}
+		}
+
+		$(this).find("i").addClass("fa-minus");
+		$(this).find(".box-descripcion").removeClass("hidden");
+		$(this).addClass("descripcion-activa");
+	}
+});
