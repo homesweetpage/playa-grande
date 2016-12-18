@@ -1,9 +1,9 @@
 var myLatLng;
 var map;
+var lastInfowindow;
 
 function initMap() {
-
-   map = new google.maps.Map(document.getElementById('map'), {
+  map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -38.026344171229276, lng: -57.53535084921265},
     scrollwheel: false,
     zoom: 16,
@@ -14,29 +14,56 @@ function initMap() {
 
 function agregarMarkers(){
   var image = "images/ico/marker.png";
+  var mHPG = "HOSTEL PLAYA GRANDE";
+  var mHPGA = "HOSTEL PLAYA GRANDE AUSTRAL";
+  var mHPGS = "HOSTEL PLAYA GRANDE SUITES";
+  var iHPG = "<div class='playa-loc'><h4>"+mHPG+"</h4>"+
+            "<span><i class='fa fa-map-marker fa-lg' aria-hidden='true'></i><a href='https://goo.gl/pBIJYd' target='_blank'>Como llegar?</a></span></div>"
+  var iHPGA = "<div class='playa-loc'><h4>"+mHPGA+"</h4>"+
+            "<span><i class='fa fa-map-marker fa-lg' aria-hidden='true'></i><a href='https://goo.gl/d5sY0Z' target='_blank'>Como llegar?</a></span></div>"
+  var iHPGS = "<div class='playa-loc'><h4>"+mHPGS+"</h4>"+
+            "<span><i class='fa fa-map-marker fa-lg' aria-hidden='true'></i><a href='https://goo.gl/W2JXwa' target='_blank'>Como llegar?</a></span></div>"
 
   myLatLng = {lat: -38.0267288, lng: -57.535148};
   var austral = new google.maps.Marker({
     position: myLatLng,
     map: map,
     icon: image,
-    title: 'HOSTEL PLAYA GRANDE AUSTRAL'
+    title: mHPGA
   });
+  attachMessage(austral, iHPGA);
+
   myLatLng = {lat: -38.0259216, lng: -57.53451399999999};
   var suites = new google.maps.Marker({
     position: myLatLng,
     map: map,
     icon: image,
-    title: 'HOSTEL PLAYA GRANDE SUITES'
+    title: mHPGS
   });
+  attachMessage(suites, iHPGS);
+
   myLatLng = {lat: -38.0276902, lng: -57.53549659999999};
   var playaGrande = new google.maps.Marker({
     position: myLatLng,
     map: map,
     icon: image,
-    title: 'HOSTEL PLAYA GRANDE'
+    title: mHPG
   });
+  attachMessage(playaGrande, iHPG);
+}
 
+
+function attachMessage(marker, message) {
+  var infowindow = new google.maps.InfoWindow({
+    content: message
+  });
+  marker.addListener('click', function() {
+    if(lastInfowindow!=null){
+      lastInfowindow.close();
+    }
+    infowindow.open(marker.get('map'), marker);
+    lastInfowindow = infowindow;
+  });
 }
 
 $(document).ready(initMap());
