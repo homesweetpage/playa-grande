@@ -16,7 +16,7 @@ var noneDisplay = "none-display";
 var clickReserva = false;
 var inAnimateReserva = true;
 var inTransition = false;
-var endAnimate = "webkitAnimationEnd mozAnimationEnd oAnimationEnd animationEnd"
+var endAnimate = "webkitAnimationEnd mozAnimationEnd oAnimationEnd animationEnd";
 var responsiveWidth = 768;
 
 function AnimateReserva(classAnimate, hasDisplay) {
@@ -33,7 +33,7 @@ function AnimateReserva(classAnimate, hasDisplay) {
 			$(this).addClass(noneDisplay);
 			inAnimateReserva = false;
 		});
-	};	
+	};
 }
 
 function AnimateService(scrollPos) {
@@ -107,7 +107,7 @@ $(document).on('scroll', function () {
 	if (w >= responsiveWidth && !inAnimateReserva) {
 		var $mC = $('#mainCarousel');
 		var bottomC = $mC.position().top + $mC.offset().top + $mC.outerHeight(true);
-		
+
 		if (scrollPos >= bottomC - 250) {
 			var hasDisplay = $boxReserva.hasClass(noneDisplay);
 			if (!hasDisplay && !clickReserva) {
@@ -156,20 +156,6 @@ $("#logo a").on("click", function (e){
 		var target = $('html, body');
 		TransitionNav(target);
 	};
-})
-
-$(".box-reserva").on("click", function (){
-	var $span = $(".box-botton span");
-	var error = 'Error! <br> Mensaje No Enviado';
-	$(".box-botton").addClass('flipOutX').one(endAnimate, function(){
-		$span.html(error);
-		$(".box-botton").addClass('btnSuccess');
-		$(".box-botton").removeClass('flipOutX');
-		$(".box-botton").addClass('flipInX').one(endAnimate, function(){
-
-		})
-
-	})
 })
 
 $(".box-hostel-titulo").click(function(){

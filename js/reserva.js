@@ -2,6 +2,7 @@ var checkIn= new Date();
 checkIn = ((checkIn.getMonth()+1) + "/" + checkIn.getDate() + "/" + checkIn.getFullYear());
 var checkOut = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
 checkOut = ((checkOut.getMonth()+1) + "/" + checkOut.getDate() + "/" + checkOut.getFullYear());
+var endAnimate = "webkitAnimationEnd mozAnimationEnd oAnimationEnd animationEnd";
 
 $( "#input-fecha-check-in" ).change(function() {
   checkIn = $("#input-fecha-check-in")[0].value;
@@ -37,7 +38,33 @@ $("#boton-reserva").click(function(event) {
         url: "reserva.php",
         data: data,
         success: function(){
-            alert("Consulta enviada exitosamente!");
+          botonConsulta('Consulta Enviada <br> Exitosamente!','btnSuccess');
+        },
+        error:function () {
+          botonConsulta('Error en servidor! <br> Consulta no Enviada','btnError');
         }
     });
 });
+
+function botonConsulta(mensaje,clase){
+	var $span = $(".box-botton span");
+	$(".box-botton").addClass('flipOutX').one(endAnimate, function(){
+		$span.html(mensaje);
+		$(".box-botton").addClass(clase);
+		$(".box-botton").removeClass('flipOutX');
+		$(".box-botton").addClass('flipInX').one(endAnimate, function(){
+      setTimeout(botonConsultaDefault,3000);
+		})
+	})
+};
+
+function botonConsultaDefault(){
+  var $span = $(".box-botton span");
+	$(".box-botton").addClass('flipOutX').one(endAnimate, function(){
+		$span.html("Consultar <br> Disponibilidad");
+		$(".box-botton").removeClass('btnSuccess');
+    $(".box-botton").removeClass('btnError');
+		$(".box-botton").removeClass('flipOutX');
+		$(".box-botton").addClass('flipInX');
+	})
+}
