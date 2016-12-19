@@ -9,7 +9,6 @@ var $contactSection = $('#contacts');
 var arrSections = [$hostelSection, $serviceSection, $locationSection, $actividadSection, $tarifaSection, $newsSection, $contactSection];
 var $boxReserva = $('.box-reserva');
 var $boxService = $('.box-servicios');
-var $boxGalery = $('.foto-galery');
 var classAnimateReservaDown = "slideInDown";
 var classAnimateReservaUp = "slideOutUp";
 var noneDisplay = "none-display";
@@ -38,19 +37,6 @@ function AnimateReserva(classAnimate, hasDisplay) {
 
 function AnimateService(scrollPos) {
 	$boxService.each(function (i){
-		if (scrollPos >= $(this).position().top - 450) {
-			if (i%2 == 0) {
-				$(this).addClass('bounceInRight');
-			} else {
-				$(this).addClass('bounceInLeft');
-			};
-			$(this).removeClass(noneDisplay);
-		};
-	});
-}
-
-function AnimateGalery(scrollPos) {
-	$boxGalery.each(function (i){
 		if (scrollPos >= $(this).position().top - 450) {
 			if (i%2 == 0) {
 				$(this).addClass('bounceInRight');
@@ -92,10 +78,11 @@ $(document).ready(function () {
 	if (w >= responsiveWidth) {
 		var hasDisplay = $boxReserva.hasClass(noneDisplay);
 		AnimateReserva(classAnimateReservaDown, hasDisplay);
+	} else {
+		$boxReserva.removeClass(noneDisplay);
 	};
 
 	AnimateService(scrollPos);
-	AnimateGalery(scrollPos);
 
 	ActiveNav(scrollPos);
 });
@@ -117,7 +104,6 @@ $(document).on('scroll', function () {
 	};
 
 	AnimateService(scrollPos);
-	AnimateGalery(scrollPos);
 
 	ActiveNav(scrollPos);
 });
@@ -160,12 +146,10 @@ $("#logo a").on("click", function (e){
 
 $(".box-hostel-titulo").click(function(){
 	if($(this).hasClass("descripcion-activa")){
-		$(this).find(".box-descripcion").addClass("hidden");
 		$(this).find("i").removeClass("fa-minus").addClass("fa-plus");
 		$(this).removeClass("descripcion-activa");
 	}
 	else {
-		$(".box-hostel-desc").find(".box-descripcion").addClass("hidden");
 		$(".box-hostel-desc").find(".box-hostel-titulo").removeClass("descripcion-activa");
 		$(".box-hostel-desc").find("i").removeClass("fa-minus").addClass("fa-plus");
 		if($(this).find(".pg-descr").html()[0]=="P"){
@@ -181,7 +165,6 @@ $(".box-hostel-titulo").click(function(){
 		}
 
 		$(this).find("i").addClass("fa-minus");
-		$(this).find(".box-descripcion").removeClass("hidden");
 		$(this).addClass("descripcion-activa");
 	}
 });
