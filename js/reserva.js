@@ -53,18 +53,22 @@ function botonConsulta(mensaje,clase){
 		$(".box-botton").addClass(clase);
 		$(".box-botton").removeClass('flipOutX');
 		$(".box-botton").addClass('flipInX').one(endAnimate, function(){
-      setTimeout(botonConsultaDefault,3000);
+      $(".box-botton").removeClass('flipInX');
+      setTimeout(function () {
+        botonConsultaDefault(clase);
+      },3000);
 		})
 	})
 };
 
-function botonConsultaDefault(){
+function botonConsultaDefault(clase){
   var $span = $(".box-botton span");
 	$(".box-botton").addClass('flipOutX').one(endAnimate, function(){
 		$span.html("Consultar <br> Disponibilidad");
-		$(".box-botton").removeClass('btnSuccess');
-    $(".box-botton").removeClass('btnError');
+		$(".box-botton").removeClass(clase);
 		$(".box-botton").removeClass('flipOutX');
-		$(".box-botton").addClass('flipInX');
+		$(".box-botton").addClass('flipInX').one(endAnimate, function(){
+      $(".box-botton").removeClass('flipInX');
+    })
 	})
 }

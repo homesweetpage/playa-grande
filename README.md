@@ -2,23 +2,19 @@
 
 
 ## NAV
--anchors
 
 
 ## CAROUSEL
--1080 se rompe
+-1080 se rompe !!
 
 
 ## RESERVA
--animacion
 -capturar fecha
--mail
 -mouseover en ingles
 
 
 ## HOSTELS
--arreglar script
--cambiar foto
+-animacion
 
 
 ## GALERIA
@@ -27,7 +23,6 @@
 
 
 ## SERVICIOS
--animacion
 
 
 ## UBICACION
@@ -35,7 +30,6 @@
 
 
 ## ACTIVIDADES
--todo
 
 
 ## TARIFAS
