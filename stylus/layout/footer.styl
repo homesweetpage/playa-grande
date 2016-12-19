@@ -1,7 +1,44 @@
 footer
-  padding 20px 0px
-	background #f3f3f3
-	text-align center
+	padding 20px 0px
+	background-color $medium-blue
+	
+	.copyr
+	.powered
+		padding 0 !important
+		
+	.copyr
+		text-align left
+		line-height 50px
+		
+		img
+			display inline-block
+		
+		p
+			font-size 16px
+			color $white
+			display inline-block
+			
+			span
+				font-weight 700
+			
+		
+	.powered
+		text-align right
+		line-height 50px
+		
+		span
+			font-size 16px
+			color $white
+			
+			a
+				color $orange
+				text-decoration none
+				transition all 0.3s
+				font-weight 700
+				
+				&:hover
+				&:focus
+					color $blue
 
 // @media (max-width: 991px) {
 // 	#contact .form-group.col-md-6{
